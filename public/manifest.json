@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Scan Zoning App",
+  "name": "Tool Build for Zoning Scans",
   "icons": [
     {
       "src": "favicon.ico",
