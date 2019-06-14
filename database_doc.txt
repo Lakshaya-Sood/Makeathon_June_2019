@@ -1,0 +1,70 @@
+#1
+db.createCollection("forms")
+db.forms.insert({  
+    "_id":1,
+    "form_name":"Form Type 3",
+    "description":"a dummy form",
+    "barcode":"1234567890",
+    "pdf_metadata":{  
+       "element-map_id_1":{ 
+         "field_name": "first_name",
+         coordinates: {
+            "point_A":{  
+               "x":0,
+               "y":0
+            },
+            "point_B":{  
+               "x":10,
+               "y":0
+            },
+            "point_C":{  
+               "x":10,
+               "y":10
+            },
+            "point_D":{  
+               "x":0,
+               "y":10
+            }
+         }  
+       },
+       "element-map_id_1":{ 
+         "field_name": "last_name",
+         "coordinates": {
+            "point_A":{  
+               "x":50,
+               "y":50
+            },
+            "point_B":{  
+               "x":60,
+               "y":50
+            },
+            "point_C":{  
+               "x":60,
+               "y":60
+            },
+            "point_D":{  
+               "x":50,
+               "y":60
+            }
+         }  
+       },
+    }
+ })
+
+#2
+db.createCollection("form_submissions")
+db.form_submissions({
+   "_id": 1,
+   "form_id": 1,
+   "form_entry" {
+      "first_name": "John",
+      "last_name": "Doe",
+      "Address": "Infosys Ltd\nHinjewadi Phase 2\nPune",
+      "gender": "male",
+      "id_proof": ["Aadhar Card","PAN Card"],
+      "date": "10061991",
+      "mobile_no": "9908967888"
+   },
+   "pdf_scan_used": true,
+   "pdf_scan_file": "<<<file_blob>>>"
+})
